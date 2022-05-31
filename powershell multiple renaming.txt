@@ -1,0 +1,10 @@
+2022.05.31
+powershell multiple renaming,
+change file/derectory name from 2022.05.31 to 2022-05-31
+1. open powershell and change cd to current.
+2. type:
+get-childitem *.* | rename-item -NewName {$_.name -replace '\.', '-'}
+
+(notice that '\.' here is a escape sequence for '.')
+3. run and check
+
